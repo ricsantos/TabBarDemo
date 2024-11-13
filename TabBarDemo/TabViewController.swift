@@ -11,6 +11,16 @@ class TabBarController: UITabBarController {
     init() {
         super.init(nibName: nil, bundle: nil)
         
+        self.view.tintColor = .red
+        self.tabBar.unselectedItemTintColor = .purple
+        
+        UITabBarItem.appearance().setTitleTextAttributes([.foregroundColor: UIColor.purple], for: .normal)
+        UITabBarItem.appearance().setTitleTextAttributes([.foregroundColor: UIColor.blue], for: .selected)
+        
+        UITabBar.appearance().tintColor = UIColor.orange
+        UITabBar.appearance().barTintColor = UIColor.systemPink
+        UITabBar.appearance().unselectedItemTintColor = UIColor.systemBlue
+        
         var vcs: [UIViewController] = []
         
         let vc1 = ViewController()
@@ -49,7 +59,7 @@ class NavigationController: UINavigationController {
         // Override the appearance here
         //self.navigationBar.barStyle = .black
         //self.navigationBar.isTranslucent = false
-        self.navigationBar.tintColor = UIColor.white
+        self.navigationBar.tintColor = UIColor.orange
         //self.navigationBar.prefersLargeTitles = true
         
         let appearance = UINavigationBarAppearance()
